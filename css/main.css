@@ -1,0 +1,102 @@
+body {
+	font: 12px Verdana, sans-serif;
+	width: 1000px;
+}
+
+.logo {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.menu {
+	font-weight: bold;
+	color: white;
+	background: #C34A2C;
+}
+
+.section-head {
+	font-weight: bold;
+	color: white;
+	background: #7B4010;
+}
+
+a {
+	color: #0000FF;
+	text-decoration: none;
+}
+
+a.menu-link {
+	color: #E0E0E0;
+	text-decoration: none;
+}
+
+.padding {
+	padding: 3px 7px;
+}
+
+.margin {
+	margin: 5px 0;
+}
+
+.padding-2 {
+	padding: 2px 5px;
+}
+
+.table {
+	display: table;
+}
+
+.row {
+	display: table-row;
+}
+
+.row.head {
+	text-align: center;
+	font-weight: bold;
+}
+
+.cell {
+	display: table-cell;
+	padding: 7px 10px;
+	border-bottom: 1px solid #DDDDDD;
+}
+
+.cell.center {
+	text-align: center;
+}
+
+.cell.ping {
+	background: lightgreen;
+	font-weight: bold;
+}
+
+.cell.error {
+	background: red;
+}
+
+.border {
+	border: 1px solid #DDDDDD;
+	border-collapse: collapse;
+}
+
+.width-2 {
+	width: 250px;
+}
+
+.width-3 {
+	width: 300px;
+}
+
+.small {
+	font: 10px Mono;
+	color: #AAAAAA;
+}
+
+.medium {
+	font: 11px Mono;
+	color: #7F7F7F;
+}
+
+.container {
+	margin: 20px 0px;
+}
