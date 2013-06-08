@@ -14,7 +14,6 @@
  See the License for the specific language governing permissions and
  limitations under the License.
  **/
-
 if (! empty ( $_POST ) && is_array ( $_POST ['servers'] )) {
 	$servers = $_POST ['servers'];
 	$_conf->set ( "servers", $servers );
@@ -59,8 +58,9 @@ if (! empty ( $servers )) {
 			<div class="small">e.g. http://192.168.1.1:8983/solr</div>
 			<div class="margin">
 				<input type="button" class="border" style="padding: 0 10px;"
-					value="Add Another" onClick="addMoreText();"> <input type="submit"
-					class="border" style="padding: 0 10px;" value="Save">
+					value="Add Another" onClick="addMoreText('servers','server-tpl');">
+				<input type="submit" class="border" style="padding: 0 10px;"
+					value="Save">
 			</div>
 		</form>
 	</div>

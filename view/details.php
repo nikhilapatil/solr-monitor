@@ -43,7 +43,9 @@ if ($actionObject ["system"] == false) {
 			<div class='cell'>Status</div>
 		</div>
 		<div class='row'>
-			<div class='cell'><?php echo $server ?></div>
+			<div class='cell'><?php echo $server?>
+			<span class="small"><a href="<?php echo $server ?>" target="_blank">#</a></span>
+			</div>
 			<div class='cell'><?php echo $core ?></div>
 			<div class='cell center'><?php echo $actionObject["system"]["solr-spec-version"] ?></div>
 			<div class='cell center'><?php echo $actionObject["system"]["lucene-spec-version"] ?></div>

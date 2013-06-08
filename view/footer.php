@@ -17,11 +17,11 @@
 ?>
 <hr class="border">
 <div class="small">
-<a href="">solr-monitor</a>
-&middot;
-&copy; 2013 Nikhil Patil
-&middot;
-Distributed under <a href="http://www.apache.org/licenses/LICENSE-2.0.txt">Apache License, Version 2.0</a>
+	<a href="http://nikhilapatil.github.io/solr-monitor/" target="_blank">solr-monitor</a>
+	&middot;
+	&copy; 2013 Nikhil Patil
+	&middot;
+	Distributed under <a href="http://www.apache.org/licenses/LICENSE-2.0.html" target="_blank">Apache License, Version 2.0</a>
 </div>
 </body>
 </html>

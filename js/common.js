@@ -1,7 +1,7 @@
-function addMoreText() {
-	var container = document.getElementById('servers');
+function addMoreText(target,template) {
+	var container = document.getElementById(target);
 	var newdiv = document.createElement('div');
-	newdiv.innerHTML = document.getElementById('server-tpl').innerHTML;
+	newdiv.innerHTML = document.getElementById(template).innerHTML;
 	container.appendChild(newdiv);
 }
 
