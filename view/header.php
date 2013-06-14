@@ -29,12 +29,12 @@ Solr Monitor <?php echo VERSION; ?>
 <?php if ($requestType == "summary") { ?>
 Summary
 <?php } else { ?>
-<a class="menu-link" href="/">Summary</a>
+<a class="menu-link" href="index.php?method=summary">Summary</a>
 <?php } ?>
  | 
 <?php if ($requestType == "configure") { ?>
 Configure
 <?php } else { ?>
-<a class="menu-link" href="/?method=configure">Configure</a>
+<a class="menu-link" href="index.php?method=configure">Configure</a>
 <?php } ?>
 </div>

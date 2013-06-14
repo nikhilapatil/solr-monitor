@@ -35,7 +35,7 @@ foreach ( $actionObject as $server => $cores ) {
 		foreach ( $cores as $coreReport ) {
 			echo "<div class='row'>";
 			echo "<div class='cell'>" . $server . "</div>";
-			echo "<div class='cell'><a href='/?method=details&name=" . urlencode ( $coreReport ['name'] ) . "&server=" . urlencode ( $server ) . "'>" . $coreReport ['name'] . "</a></div>";
+			echo "<div class='cell'><a href='index.php?method=details&name=" . urlencode ( $coreReport ['name'] ) . "&server=" . urlencode ( $server ) . "'>" . $coreReport ['name'] . "</a></div>";
 			if ($coreReport ['ping'] == "OK") {
 				$class = "ping";
 			} else {
