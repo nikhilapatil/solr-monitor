@@ -32,18 +32,27 @@ function sortTable(table_id, sort_child_name, sort_order) {
 	}
 
 	rowsArray.sort(function(a, b) {
-		if (a[0] == b[0])
+		if (a[0].toLowerCase() == b[0].toLowerCase()) {
 			return 0;
-		n1 = parseFloat(a[0]);
-		n2 = parseFloat(b[0]);
+		}
+		n1 = parseFloat(a[0].toLowerCase());
+		n2 = parseFloat(b[0].toLowerCase());
 		if (isNaN(n1) && isNaN(n2)) {
-			return (a[0] > b[0]) ? 1 : 0;
+			if (a[0].toLowerCase() > b[0].toLowerCase()) {
+				return 1;
+			} else {
+				return -1;
+			}
 		} else if (!isNaN(n1) && !isNaN(n2)) {
-			return (n1 > n2) ? 1 : 0;
+			if (n1 > n2) {
+				return 1;
+			} else {
+				return -1;
+			}
 		} else if (isNaN(n1) && !isNaN(n2)) {
 			return 1;
 		}
-		return 0;
+		return -1;
 	});
 
 	if (sort_order == 'desc') {
