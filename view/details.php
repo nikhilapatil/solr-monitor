@@ -60,12 +60,17 @@ if ($actionObject ["system"] == false) {
 <div class="container">
 	<div class="section-head border padding margin">Query Handlers</div>
 	<?php if (!empty($actionObject ["stats"] ["queryhandler"])) { ?>
-	<div class='table border padding margin'>
+	<div class='table border padding margin' id='handlers'>
 		<div class='row head'>
 			<div class='cell'>Name</div>
 			<div class='cell'>Class</div>
-			<?php foreach ($handlerStatsFields as $field) {?>
-			<div class='cell'><?php echo $field['title'] ?></div>
+			<?php foreach ($handlerStatsFields as $key => $field) {?>
+			<div class='cell'><?php echo $field['title']?>
+			<span class="medium"><a href="#" class="event-link"
+					onClick="sortTable('handlers','<?php echo $key ?>','asc')">&uarr;</a>/<a
+					href="#" class="event-link"
+					onClick="sortTable('handlers','<?php echo $key ?>','desc')">&darr;</a></span>
+			</div>
 			<?php } ?>
 		</div>
 		<?php
@@ -79,7 +84,7 @@ if ($actionObject ["system"] == false) {
 			echo "</div>";
 			echo "<div class='cell'>" . $handler ['class'] . "</div>";
 			foreach ( $handlerStatsFields as $key => $field ) {
-				echo "<div class='cell center'>";
+				echo "<div class='cell center' name='$key'>";
 				printf ( $field ['format'], $handler [$key] );
 				echo "</div>";
 			}

@@ -16,10 +16,19 @@
  **/
 ?>
 <div class="container">
-	<div class='table border padding margin'>
+	<div class='table border padding margin' id="summary">
 		<div class='row head'>
-			<div class='cell'>Server</div>
-			<div class='cell'>Core</div>
+			<div class='cell'>
+				Server <span class="medium"><a href="#" class="event-link"
+					onClick="sortTable('summary','server','asc')">&uarr;</a>/<a
+					href="#" class="event-link"
+					onClick="sortTable('summary','server','desc')">&darr;</a></span>
+			</div>
+			<div class='cell'>
+				Core <span class="medium"><a href="#" class="event-link"
+					onClick="sortTable('summary','core','asc')">&uarr;</a>/<a href="#"
+					class="event-link" onClick="sortTable('summary','core','desc')">&darr;</a></span>
+			</div>
 			<div class='cell'>Ping</div>
 			<div class='cell'>Documents</div>
 			<div class='cell'>Uptime</div>
@@ -28,14 +37,14 @@
 foreach ( $actionObject as $server => $cores ) {
 	if ($cores === false) {
 		echo "<div class='row'>";
-		echo "<div class='cell'>" . $server . "</div>";
+		echo "<div class='cell' name='server'>" . $server . "</div>";
 		echo "<div class='cell center error'>" . ERROR_MISSING_CORE_INFO . "</div>";
 		echo "</div>";
 	} else {
 		foreach ( $cores as $coreReport ) {
 			echo "<div class='row'>";
-			echo "<div class='cell'>" . $server . "</div>";
-			echo "<div class='cell'><a href='index.php?method=details&name=" . urlencode ( $coreReport ['name'] ) . "&server=" . urlencode ( $server ) . "'>" . $coreReport ['name'] . "</a></div>";
+			echo "<div class='cell' name='server'>" . $server . "</div>";
+			echo "<div class='cell' name='core'><a href='index.php?method=details&name=" . urlencode ( $coreReport ['name'] ) . "&server=" . urlencode ( $server ) . "'>" . $coreReport ['name'] . "</a></div>";
 			if ($coreReport ['ping'] == "OK") {
 				$class = "ping";
 			} else {

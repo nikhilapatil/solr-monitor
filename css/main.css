@@ -27,7 +27,10 @@ a {
 
 a.menu-link {
 	color: #E0E0E0;
-	text-decoration: none;
+}
+
+a.event-link {
+	color: #7F7F7F;
 }
 
 .padding {
