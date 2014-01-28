@@ -23,7 +23,7 @@
 </head>
 <body>
 <!-- Github Fork Image -->
-<a href="https://github.com/nikhilapatil/solr-monitor">
+<a href="https://github.com/nikhilapatil/solr-monitor" target="_blank">
 <img alt="Fork me on GitHub" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" style="position: absolute; top: 0; right: 0; border: 0;z-index:99999999;"></img>
 </a>
 <div class="logo padding margin">
